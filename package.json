@@ -1,0 +1,44 @@
+{
+  "name": "@skyrpex/remember",
+  "description": "Method that retrieves a value from an object given a path",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/remember.cjs.js",
+  "module": "dist/remember.esm.js",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "rollup --config --format cjs --output dist/remember.cjs.js",
+    "build:esm": "rollup --config --format es --output dist/remember.esm.js",
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skyrpex/remember.git"
+  },
+  "keywords": [
+    "lodash"
+  ],
+  "author": "cristian@pallares.io",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skyrpex/remember/issues"
+  },
+  "dependencies": {
+    "lodash": "^3.7 || ^4.0"
+  },
+  "devDependencies": {
+    "ava": "^0.19.0",
+    "babel-cli": "^6.14.0",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.0.2",
+    "eslint": "^3.4.0",
+    "eslint-config-airbnb-base": "^11.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1"
+  }
+}
