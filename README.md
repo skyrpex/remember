@@ -17,7 +17,7 @@ const object = {
   a: 'value A',
 };
 
-console.log(remember(object, 'a', () => 'default A')); // logs 'value A'
-console.log(remember(object, 'b', () => 'default B'); // logs 'default B'
-console.log(object.b); // logs 'default B'
+remember(object, 'a', () => 'default A'); // 'value A'
+remember(object, 'b', () => 'default B'); // 'default B'
+object.b; // 'default B'
 ```
