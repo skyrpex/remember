@@ -7,6 +7,9 @@
   },
   "main": "dist/remember.cjs.js",
   "module": "dist/remember.esm.js",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "prepublish": "npm run build",
     "build": "npm run build:cjs && npm run build:esm",
